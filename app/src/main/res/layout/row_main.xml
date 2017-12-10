@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="300dp"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
     android:orientation="vertical">
 
     <ImageView
         android:id="@+id/imageRow"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_height="300dp"
         android:scaleType="centerCrop"
         android:src="@mipmap/ic_launcher"/>
 
@@ -17,9 +15,11 @@
         android:id="@+id/titleRow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#000"
+        android:background="#77000000"
         android:textColor="#FFF"
         android:padding="16dp"
+        android:singleLine="true"
+        android:layout_gravity="bottom"
         android:text="Title "/>
 
-</LinearLayout>
+</FrameLayout>

@@ -5,9 +5,16 @@
     android:layout_height="match_parent"
     tools:context="yusuf.radhika.id.movie_intermediate.main.MainActivity">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/recyclerMain"
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeMain"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerMain"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
 
 </RelativeLayout>

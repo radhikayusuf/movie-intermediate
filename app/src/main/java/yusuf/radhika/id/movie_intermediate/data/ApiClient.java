@@ -15,6 +15,7 @@ public class ApiClient {
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl("https://api.themoviedb.org/3/")
                 .build();
+
         return retrofit.create(ApiRequestInterface.class);
     }
 
