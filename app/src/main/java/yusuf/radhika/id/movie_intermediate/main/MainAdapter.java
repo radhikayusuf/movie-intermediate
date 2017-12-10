@@ -43,7 +43,7 @@ public class MainAdapter extends RecyclerView.Adapter<MainAdapter.MainHolder>{
 
         Picasso.with(holder.imageRow.getContext())
                 .load(mData.get(position).getImageUrl())
-
+                .placeholder(R.drawable.popcorn_placeholder)
                 .into(holder.imageRow);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {

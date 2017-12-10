@@ -2,6 +2,7 @@ package yusuf.radhika.id.movie_intermediate.detail;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -16,6 +17,7 @@ public class DetailActivity extends AppCompatActivity {
 
     private TextView textTitle, textDesc, textRelease;
     private ImageView imagePoster, imageBackground;
+    private Toolbar mToolbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +26,13 @@ public class DetailActivity extends AppCompatActivity {
 
         mData = getIntent().getParcelableExtra("dataMovie");
 
+
+        mToolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(mToolbar);
+
+        getSupportActionBar().setTitle(mData.getTitle());
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDefaultDisplayHomeAsUpEnabled(true);
 
         textTitle = (TextView) findViewById(R.id.textTitle);
         textRelease = (TextView) findViewById(R.id.textReleaseDate);

@@ -14,6 +14,7 @@ import android.os.Bundle;
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
     private RecyclerView mRecyclerMain;
     private SwipeRefreshLayout mRefreshLayout;
+    private Toolbar mToolbar;
 
     private MainAdapter mAdapter;
     private List<MainDao> mData = new ArrayList<>();
@@ -52,6 +54,10 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
 
         mRecyclerMain = (RecyclerView) findViewById(R.id.recyclerMain);
         mRefreshLayout = (SwipeRefreshLayout) findViewById(R.id.swipeMain);
+        mToolbar = (Toolbar) findViewById(R.id.toolbarMain);
+
+        setSupportActionBar(mToolbar);
+        getSupportActionBar().setTitle(R.string.my_film);
 
         mRefreshLayout.setOnRefreshListener(this);
 
